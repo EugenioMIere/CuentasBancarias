@@ -41,13 +41,13 @@ public class CuentaCorrienteTest {
 	public void queAlUsarDineroDescubiertoCobreCincoPorcientoExtra() {
 
 		CuentaCorriente cuenta1 = new CuentaCorriente();
-		cuenta1.depositar(2000.00);
+		cuenta1.depositar(2001.00);
 		cuenta1.setDescubierto(2000.00);
 
 		cuenta1.extraer(3000.00);
 		Double obtenerDeuda = cuenta1.getDeuda();
 
-		assertEquals(obtenerDeuda, 1050.00, 0.01);
+		assertEquals(obtenerDeuda, 1048.95, 0.01);
 
 	}
 
